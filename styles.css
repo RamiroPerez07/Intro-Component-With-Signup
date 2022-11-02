@@ -47,7 +47,7 @@ html{
 body{
     width: 100%;
     max-width: 1440px;
-    min-height: min(560px, 100vh);
+    min-height: min(625px, 100vh);
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
