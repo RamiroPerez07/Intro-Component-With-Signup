@@ -19,6 +19,8 @@
     --grayishBlue: hsl(246, 25%, 77%);
     /*white*/
     --white: #ffffff;
+    /*Footer*/
+    --colorFooter: #2c323c;
     /*Font Weights*/
     --fw-400: 400;
     --fw-500: 500;
@@ -47,8 +49,7 @@ html{
 body{
     width: 100%;
     max-width: 1440px;
-    min-height: min(625px, 100vh);
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
@@ -61,6 +62,8 @@ body{
 .attribution { 
     font-size: var(--fs-small); 
     text-align: center; 
+    color: var(--colorFooter);
+    font-weight: var(--fw-500);
 }
 
 .attribution a { 
