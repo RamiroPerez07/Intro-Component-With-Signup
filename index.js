@@ -101,7 +101,7 @@ function sendInformation(event){
         showSuccess(lastNameInput)
         showSuccess(emailInput)
         showSuccess(passwordInput)
-        alert("Datos enviados")
+        form.reset()
         return 
     }
 }
