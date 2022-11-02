@@ -177,6 +177,10 @@
         color: var(--red);
     }
 
+    .form-field .error::placeholder{
+        color: var(--red);
+    }
+
     .form-field .error:focus{
         outline-color: var(--red);
     }
