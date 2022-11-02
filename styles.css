@@ -27,6 +27,7 @@
     /*Font Size*/
     --fs-xsmall: 0.6rem;
     --fs-small: 0.8rem;
+    --fs-small1: 0.9rem;
     --fs-medium: 1rem;
     --fs-large: 2.5rem;
 }
@@ -113,7 +114,7 @@
     /* Form */
     #form{
         width: 95%;
-        height: 400px;
+        height: auto;
         background-color: var(--white);
         box-shadow: 0px 5px  rgba(0, 0, 0, 0.2);
         display: grid;
@@ -121,10 +122,15 @@
         justify-items: center;
         align-items: start;
         padding: 6%;
+        grid-auto-rows: min-content;
+        gap: 15px;
     }
 
     .form-field{
         width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .form-field input{
@@ -141,6 +147,40 @@
         outline-color: var(--grayishBlue);
     }
 
+    .form-field .icon-error{
+        display: none;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        z-index: 1;
+        height: 20px;
+        width: 20px;
+        background-image: url("./images/icon-error.svg");
+        background-color: var(--red);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        border-radius: 100%;
+    }
+
+    .form-field small{
+        font-size: var(--fs-xsmall);
+        justify-self: end;
+        color: var(--red);
+        width: 100%;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .form-field .error{
+        border: 1px solid var(--red);
+        color: var(--red);
+    }
+
+    .form-field .error:focus{
+        outline-color: var(--red);
+    }
+
 
     #form button{
         width: 100%;
@@ -150,6 +190,9 @@
         border: 1px solid var(--green);
         border-radius: 5px;
         cursor: pointer;
+        box-shadow: 0px 3px hsl(154deg 56% 46%);
+        font-weight: var(--fw-700);
+        font-size: var(--fs-small1);
     }
 
     .term-txt{
